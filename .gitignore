@@ -1,0 +1,7 @@
+.venv
+.DS_Store
+client/node_modules
+client/yarn.lock
+db.sqlite3
+*.pyc
+.idea/*
