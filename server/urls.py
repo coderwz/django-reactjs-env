@@ -18,7 +18,17 @@ from django.contrib import admin
 
 from django.views import generic
 
+
+def hello_world(request):
+    from django.http import JsonResponse
+    return JsonResponse({
+        'id': 'hello',
+        'name': 'world'
+    })
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^index/', generic.TemplateView.as_view(template_name='index.html'))
+    url(r'^index/', generic.TemplateView.as_view(template_name='index.html')),
+    url(r'^data/hello_world', hello_world)
 ]
+
